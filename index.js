@@ -13,14 +13,15 @@ var Interstitial = function Interstitial(target){
     __.style.top = '0px';
     __.style.left = '0px';
     __.style.backgroundColor = 'rgba(0,0,0,0.8)';
-    __.style.width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) + 'px';
-    __.style.height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) + 'px';
+    __.style.width = '100vw';
+    __.style.height = '100vh';
     __.style.zIndex = 6000000;
+
     __.child.style.position = 'absolute';
     __.child.style.top = '50%';
     __.child.style.left = '50%';
-    __.child.style.marginRight = '-50%';
-    __.child.style.transform = 'translate(-50%, -50%)';
+    __.child.style.webkitTransform = 'translate(-50%,-50%)';
+    __.child.style.transform = 'translate(-50%,-50%)';
     __.child.style.zIndex = 6000001;
     window.addEventListener('resize', __.resize, false);
   };

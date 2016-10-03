@@ -79,16 +79,16 @@
 	    __.style.position = 'fixed';
 	    __.style.top = '0px';
 	    __.style.left = '0px';
-	    __.style.backgroundColor = '#000';
-	    __.style.opacity = '0.8';
-	    __.style.width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) + 'px';
-	    __.style.height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) + 'px';
+	    __.style.backgroundColor = 'rgba(0,0,0,0.8)';
+	    __.style.width = '100vw';
+	    __.style.height = '100vh';
 	    __.style.zIndex = 6000000;
+	
 	    __.child.style.position = 'absolute';
 	    __.child.style.top = '50%';
 	    __.child.style.left = '50%';
-	    __.child.style.marginRight = '-50%';
-	    __.child.style.transform = 'translate(-50%, -50%)';
+	    __.child.style.webkitTransform = 'translate(-50%,-50%)';
+	    __.child.style.transform = 'translate(-50%,-50%)';
 	    __.child.style.zIndex = 6000001;
 	    window.addEventListener('resize', __.resize, false);
 	  };
@@ -99,7 +99,6 @@
 	    __.style.top = __.currStyle.top;
 	    __.style.left = __.currStyle.left;
 	    __.style.backgroundColor = __.currStyle.backgroundColor;
-	    __.style.opacity = __.currStyle.opacity;
 	    __.style.width = __.currStyle.width;
 	    __.style.height = __.currStyle.height;
 	    __.style.zIndex = __.currStyle.zIndex;
@@ -136,12 +135,12 @@
 	    __.currStyle.zIndex = __.style.zIndex;
 	    __.child = target.firstElementChild;
 	    __.childStyle = {};
-	    __.childStyle.position = __.style.position;
-	    __.childStyle.top = __.style.top;
-	    __.childStyle.left = __.style.left;
-	    __.childStyle.marginRight = __.style.marginRight;
-	    __.childStyle.transform = __.style.transform;
-	    __.childStyle.zIndex = __.style.zIndex;
+	    __.childStyle.position = __.child.style.position;
+	    __.childStyle.top = __.child.style.top;
+	    __.childStyle.left = __.child.style.left;
+	    __.childStyle.marginRight = __.child.style.marginRight;
+	    __.childStyle.transform = __.child.style.transform;
+	    __.childStyle.zIndex = __.child.style.zIndex;
 	    __.build();
 	  })();
 	

@@ -1,6 +1,6 @@
 {
   "name": "interstitial",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "It change target dom's style as Interstitial background.",
   "scripts": {
     "compile": "NODE_ENV=develop ./node_modules/.bin/webpack --watch",
